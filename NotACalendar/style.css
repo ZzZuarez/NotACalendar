@@ -6,8 +6,6 @@
 }
 
 body{
-    height: 100vh;
-    display: flex;
     justify-content: center;
     align-content: center;
     background: linear-gradient(135deg, #d9a7c7, #fffcdc);
@@ -16,7 +14,7 @@ body{
 
 .navBar{
     display: flex;
-    margin: 20px ;
+    margin: 50px auto ;
     justify-content: space-between;
     align-items: center;
     width: 70%;
@@ -27,7 +25,7 @@ body{
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
     border: 1px solid rgba(255, 255, 255, 0.18);
-
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .logo{
@@ -94,4 +92,87 @@ body{
 .navLinks li:hover {
     transform: scale(1.2);
 }
+
+.content {
+    display: flex;  
+    align-items: center;  
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    width: 70%;
+    margin: 0 auto;
+}
+
+strong{
+    display: inline;
+}
+
+.textbutton{
+    width: 30%;
+    font-size: 21px;
+    /* display: flex; */
+    margin-left:5rem;
+    
+}
+
+.hojas {
+    display: flex;
+    width: 45%;
+    max-width: 100%;
+    margin-right: 5rem;
+    margin-top:-4rem ;
+}
+
+.presentacion{
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    padding: 2rem;
+    border-radius: 5%;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 100%;
+}
+
+.botonprincipal{
+    margin-top: 3rem;
+    margin-left: 9rem;
+    display: inline-block;
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+.botonprincipal:hover{
+    background-color: #d9a7c7;
+}
+
+/* .date{
+    position: absolute;
+    margin: 200px;
+} */
+
+.fecha {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.dia {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mes {
+    font-size: 24px;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
 
