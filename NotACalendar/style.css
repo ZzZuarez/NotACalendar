@@ -93,12 +93,15 @@ body{
     transform: scale(1.2);
 }
 
+/* TODO --> ARREGLAR LA DIVISION DE BACKGROUND COLOR DE SECCIONES */
+
 .content {
     display: flex;  
     align-items: center;  
     justify-content: space-between;
     flex-wrap: wrap; 
     width: 70%;
+    height: 52rem;
     margin: 0 auto;
 }
 
@@ -162,17 +165,67 @@ strong{
     font-size: 24px;
     cursor: pointer;
     user-select: none;
+    /* perspective: 100px; */
 }
 
 .dia {
-    font-size: 28px;
+    font-size: 200px;
+    position: absolute;
+    margin-top: -10rem;
+    margin-left: 16rem;
     font-weight: bold;
+    perspective: 500px; /* Ajusta este valor según sea necesario */
+
+    /* Transformación para cizallar y rotar */
+    transform: skewX(-18.37deg) translateZ(50px);
+
+    /* Ajustes opcionales para mejorar el efecto */
+    transform-origin: bottom left; /* Origen de la transformación */
+    color: black; /* Color del texto */
+}
+
+.contenedormes{
+    transform: skewX(-18.37deg) translateZ(50px);
+    margin-left: 58.3rem ;
+    margin-top: -24rem;
+    position: absolute;
+    height: 65px;
+    width: 343.9px;
+    background-color: #d9a7c7;
 }
 
 .mes {
-    font-size: 24px;
-    margin-left: 5px;
+    /* position: absolute; */
+    /* transform: skewX(-18.37deg) translateZ(50px); */
+    /* padding: 3.2px ; */
+    font-size: 47px;
+    /* margin-left: 61rem;
+    margin-top: -23.9rem; */
+    display: flex;
     text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+
 }
 
+.borde{
+    transform: skewX(-18.37deg) translateZ(50px) skewY(18.37deg);
+    margin-left: 79.7rem ;
+    margin-top: -23rem;
+    position: absolute;
+    height: 65px;
+    width: 51px;
+    background-color: #a47a95;
+}
 
+.un-digito {
+    width: 301px; /* Ancho para un dígito */
+    
+    text-align: center;
+  }
+  
+  .dos-digitos {
+    width: 301px; /* Ancho para dos dígitos */
+    text-align: center;
+  }
+  

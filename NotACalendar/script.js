@@ -1,34 +1,47 @@
-// Obtener la fecha actual del sistema
 let fecha = new Date();
 
-// Formatea la fecha y separa el día y el mes
+// Formatea la fecha correctamente con día y mes en texto
 function formatearFecha(fecha) {
     const opciones = { day: 'numeric', month: 'long' };
     let fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
-    
-    // Dividir la fecha en día y mes usando un método más fiable
-    let partesFecha = fechaFormateada.split(" "); // Separar en dos partes
-    const dia = partesFecha[0]; // Primer parte es el día
-    const mes = partesFecha[1]; // Segunda parte es el mes
-    
-    // Convertir el mes a mayúsculas
-    return { dia, mes: mes.toUpperCase() };
+    return fechaFormateada;
 }
 
 // Muestra la fecha inicial (que es la fecha actual)
 const fechaElementoDia = document.getElementById('dia');
 const fechaElementoMes = document.getElementById('mes');
 
-const { dia, mes } = formatearFecha(fecha);
-fechaElementoDia.textContent = dia;
-fechaElementoMes.textContent = mes;
+function actualizarFecha() {
+    const fechaFormateada = formatearFecha(fecha);
+
+    // El formato devuelto será "día de mes" (por ejemplo, "7 de noviembre")
+    const partesFecha = fechaFormateada.split(' de ');
+    const dia = partesFecha[0]; // Día
+    const mes = partesFecha[1]; // Mes en texto
+
+    fechaElementoDia.textContent = dia;
+    fechaElementoMes.textContent = mes.charAt(0).toUpperCase() + mes.slice(1); // Mayúscula al inicio del mes
+
+    actualizarPosicionDia(dia);  // Llama a la función para ajustar el estilo del día
+}
+
+// Función para ajustar el ancho y la clase dependiendo de los dígitos del día
+function actualizarPosicionDia(dia) {
+    if (dia.length === 1) {
+        fechaElementoDia.classList.remove("dos-digitos");
+        fechaElementoDia.classList.add("un-digito");
+    } else if (dia.length === 2) {
+        fechaElementoDia.classList.remove("un-digito");
+        fechaElementoDia.classList.add("dos-digitos");
+    }
+}
+
+actualizarFecha(); // Actualiza la fecha al cargar
 
 // Maneja el click para avanzar la fecha un día
 fechaElementoDia.addEventListener('click', function() {
     fecha.setDate(fecha.getDate() + 1); // Incrementa un día
-    const { dia, mes } = formatearFecha(fecha);
-    fechaElementoDia.textContent = dia; // Actualiza el día
-    fechaElementoMes.textContent = mes; // Actualiza el mes
+    actualizarFecha(); // Actualiza la fecha mostrada
 });
 
 // Verifica si la fecha en la página es la actual al recargar
@@ -37,9 +50,7 @@ function actualizarFechaSiEsNuevoDía() {
     // Comparar si la fecha de la página está desactualizada
     if (fecha.getDate() !== fechaHoy.getDate() || fecha.getMonth() !== fechaHoy.getMonth()) {
         fecha = fechaHoy; // Actualiza la fecha al día actual
-        const { dia, mes } = formatearFecha(fecha);
-        fechaElementoDia.textContent = dia;
-        fechaElementoMes.textContent = mes;
+        actualizarFecha();
     }
 }
 
