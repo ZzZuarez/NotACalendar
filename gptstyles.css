@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #d9a7c7, #fffcdc);
+    font-family: "PT Sans", sans-serif;
+    min-height: 100vh; /* Asegura que cubra toda la altura de la ventana */
+    padding: 20px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Controla el ancho máximo en pantallas grandes */
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navLinks li {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.navLinks li:hover {
+    transform: scale(1.1);
+}
+
+.funciones {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.presentacion {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px; /* Limita el ancho en pantallas grandes */
+}
+
+.botonprincipal {
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.botonprincipal:hover {
+    background-color: #d9a7c7;
+}
+
+.hojas {
+    width: 100%;
+    max-width: 400px; /* Limita el tamaño de la imagen */
+    margin-top: 20px;
+}
+
+.fecha {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.contenedormes {
+    background-color: #d9a7c7;
+    padding: 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.mes {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.borde {
+    height: 5px;
+    width: 50px;
+    background-color: #a47a95;
+    margin-top: 10px;
+}
+
+/* Media Queries para ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hojas {
+        max-width: 80%;
+    }
+
+    .botonprincipal {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .fecha {
+        font-size: 2.5rem;
+    }
+
+    .mes {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navBar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .hojas {
+        max-width: 100%; /* Asegura que la imagen no desborde el contenedor */
+    }
+
+    .botonprincipal {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    .fecha {
+        font-size: 2rem;
+    }
+
+    .mes {
+        font-size: 1.3rem;
+    }
+}
