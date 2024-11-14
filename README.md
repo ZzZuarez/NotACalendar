@@ -1,10 +1,10 @@
-##<b>NotACalendar</b>
+## <b>NotACalendar</b>
 
 
 Welcome to NotACalendar, a web application designed to help you manage your time in an engaging and interactive way. This project offers a variety of features, such as daily and monthly organizers, a menstrual calendar, and even mini-games to make time management fun.
 
 
-<b>Features</b>
+## <b>Features</b>
 
 
 Daily and Monthly Organizers: Keep track of your tasks and appointments in an easy-to-use calendar format.
