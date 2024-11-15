@@ -52,3 +52,12 @@ Contributions are welcome! If you have ideas for new features or improvements, f
 **The 6 hours I was programming were to solve design errors that were not very responsive, but I managed to solve them :D.**
 
 **I learned Markdown functionalities.**
+
+### [11-14-2024]
+**I fixed the distance the button had from the start text.**
+
+**I replaced the calendar image (multi-page effect) and decided to do it manually with divs and transforms, this helped the image not lose quality, be much more responsive, and be able to link the text that goes above the calendar to the pages, things that were unnecessarily more difficult with the image.**
+
+**I again had responsive problems with the changing calendar design, I still have a hard time learning the theory of containers and relative measurements.**
+
+**I decided to replace the calendar images and do it purely with divs and transforms, to make it more responsive.**
