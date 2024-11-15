@@ -100,6 +100,7 @@ body{
 
 .content {
     display: flex;  
+    justify-content: space-between;
     width: 70%;
     height: 52rem;
     margin: 0 auto;
@@ -122,38 +123,23 @@ strong{
     position: relative; 
 }
 
-.imageHojas{
-    position: absolute;
-    display: flex;
-    width: 70%;
-    justify-content: end;
-    align-items: end;
-}
-
-.hojas {
-    display: flex;
-    max-width: 100%;
-    width: 40%;
-    /* padding-right: -500px; */
-    
-}
 
 .presentacion{
     font-size: 3.5vw;
     width: 30vw;
     display: flex;
     font-weight: 450;
-    margin-top: 5rem;
+    margin-top: 3.5rem;
     font-family: "Outfit", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: absolute;           /* Permite mover el <p> a la punta izquierda */
+    /* position: absolute; */
     
 }
 
 
 .botonprincipal{
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
-    margin-bottom: 9%;
+    margin-top: 3rem;
     width: 8rem;
     height: 3rem;
     display: block;
@@ -182,39 +168,108 @@ strong{
     margin: 200px;
 } */
 
+.contenedorCuadrado{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.cuadrado{
+    position: relative;
+    width: 20vw;
+    height: 40vh;
+}
+
+.cuadradoHoja{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transform: skewX(-18.37deg) translateZ(50px);
+    border: 1px solid #ccc; /* Borde gris claro */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Sombra para simular el efecto de apilamiento */
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+
+.cuadradoHoja:nth-child(2) {
+    top: 10px; /* Desplazamiento vertical */
+    left: 10px; /* Desplazamiento horizontal */
+    transform: rotate(-3deg); /* Ligera rotación para el efecto inclinado */
+    background-color: rgb(217,217,217);
+    transform: skewX(-18.37deg) translateZ(50px);
+    z-index: 3;
+    border: 1px solid #ccc; /* Borde gris claro */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra más marcada */
+}
+
+.cuadradoHoja:nth-child(3) {
+    top: 20px;
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    left: 20px;
+    transform: rotate(-6deg); /* Más inclinación */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra aún más profunda */
+    transform: skewX(-18.37deg) translateZ(50px);
+
+}
+
+.cuadradoHoja:nth-child(4) {
+    top: 30px;
+    z-index: 1;
+    background-color: rgb(217, 217, 217);
+    left: 30px;
+    transform: rotate(-6deg); /* Más inclinación */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra aún más profunda */
+    transform: skewX(-18.37deg) translateZ(50px);
+
+}
+
+.cuadradoHoja:nth-child(5) {
+    position: absolute;
+    width: 101%;
+    height: 20%;
+    background-color: rgb(217,167,199);
+    transform: skewX(-18.37deg) translateZ(50px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Sombra para simular el efecto de apilamiento */
+    z-index: 6;
+    top: 0%;
+    left: 12%;
+
+}
 
 .fecha {
-    font-size: 24px;
+    font-size: 100%;
     cursor: pointer;
+    position: absolute;
+    z-index: 4;
     user-select: none;
     /* perspective: 100px; */
 }
 
 .dia {
-    font-size: 200px;
+    font-size: 34vh;
     position: absolute;
-    margin-top: -10rem;
-    margin-left: 16rem;
+    margin-top: 0vw;
+    margin-left: 0;
     font-weight: bold;
-    perspective: 500px; /* Ajusta este valor según sea necesario */
-
-    /* Transformación para cizallar y rotar */
     transform: skewX(-18.37deg) translateZ(50px);
-
-    /* Ajustes opcionales para mejorar el efecto */
-    transform-origin: bottom left; /* Origen de la transformación */
-    color: black; /* Color del texto */
+    transform-origin: bottom left;
+    color: black;
 }
 
 .contenedormes{
+    margin-left: 5.5vh;
     transform: skewX(-18.37deg) translateZ(50px);
-    margin-left: 58.3rem ;
-    margin-top: -24rem;
     position: absolute;
+    z-index: 5;
     height: 65px;
-    width: 343.9px;
+    width: 100%;
     background-color: #d9a7c7;
 }
+
 
 .mes {
     /* position: absolute; */
@@ -232,12 +287,13 @@ strong{
 
 .borde{
     transform: skewX(-18.37deg) translateZ(50px) skewY(18.37deg);
-    margin-left: 79.7rem ;
-    margin-top: -23rem;
     position: absolute;
-    height: 65px;
-    width: 51px;
+    margin-left: 22.5vw;
+    margin-top: 1vh;
+    height: 18%;
+    width: 11%;
     background-color: #a47a95;
+    z-index: 6;
 }
 
 .un-digito {
