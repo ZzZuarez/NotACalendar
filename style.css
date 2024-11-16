@@ -170,10 +170,14 @@ strong{
 
 .contenedorCuadrado{
     position: relative;
+    display: flex;
+    justify-content: end;
+    padding-right: 7%;
     width: 100%;
     height: 100%;
 
 }
+
 
 .cuadrado{
     position: relative;
@@ -227,17 +231,25 @@ strong{
 
 }
 
-.cuadradoHoja:nth-child(5) {
+.cuadradoHoja1{
     position: absolute;
-    width: 101%;
-    height: 20%;
+    width: 20vw;
+    height: 40vh;
     background-color: rgb(217,167,199);
     transform: skewX(-18.37deg) translateZ(50px);
+    border: 1px solid #ccc; /* Borde gris claro */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Sombra para simular el efecto de apilamiento */
-    z-index: 6;
-    top: 0%;
-    left: 12%;
+    z-index: 9;
+    top: 0;
+    left: 0;
+}
 
+.especial{
+    height: 10vh;
+    width: 29vw;
+    position: absolute;
+    z-index: 12;
+    overflow: hidden;
 }
 
 .fecha {
@@ -260,15 +272,16 @@ strong{
     color: black;
 }
 
-.contenedormes{
+/* .contenedormes{
     margin-left: 5.5vh;
     transform: skewX(-18.37deg) translateZ(50px);
     position: absolute;
     z-index: 5;
-    height: 65px;
-    width: 100%;
+    height: 20%;
+    width: 113%;
     background-color: #d9a7c7;
-}
+    z-index: 6;
+} */
 
 
 .mes {
@@ -282,7 +295,6 @@ strong{
     text-transform: uppercase;
     text-align: center;
     justify-content: center;
-
 }
 
 .borde{
