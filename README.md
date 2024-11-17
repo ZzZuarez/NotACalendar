@@ -61,3 +61,9 @@ Contributions are welcome! If you have ideas for new features or improvements, f
 **I again had responsive problems with the changing calendar design, I still have a hard time learning the theory of containers and relative measurements.**
 
 **I decided to replace the calendar images and do it purely with divs and transforms, to make it more responsive.**
+
+### [11-17-2024]
+
+**I finally finished the "hero section" of this page, I'm VERY happy with the result, it feels great to have done it with my own skills and achieved the exact design I wanted.**
+
+**The calendar design is fully responsive (which cost me a lot).**
