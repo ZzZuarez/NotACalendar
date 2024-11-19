@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NotACalendar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
     </style>
     <script src="https://cdn.jsdelivr.net/npm/turn.js@4.1.0/dist/turn.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100&icon_names=favorite,home,search,settings" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100..900&family=Outfit:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    </style>
 </head>
 <body>
     <!-- Barra de navegacion -->
-    <nav class="navBar">
+    <nav class="navBar animate__animated animate__slideInDown">
         <!-- Logo (texto) -->
         <div class="logo">
             <a href="index.html">
@@ -40,23 +44,56 @@
             </div>
         </ul>
     </nav>
-
-    <div class="content">
-        <div class="textbutton">
-            <p class="presentacion">Explora una amplia gama de funciones diseñadas para organizar tu tiempo de manera eficiente. Desde organizadores diarios y mensuales hasta calendarios menstruales, minijuegos interactivos y mucho más. En <b>NotACalendar</b>, estamos constantemente agregando nuevas herramientas para ayudarte a gestionar tu <b>día</b> a día. Porque tu <b>tiempo</b>, bienestar y vida son lo más importante.</p>
-            <button class="botonprincipal">Comenzar</button>
+<!-- TODO ha que envolver el boton y el texto para poder alinearlos y que queden juntos, y que cuando se cambie el view, no se despeguen -->
+    <div class="content animated-entry">
+        <div class="textAndButton animate__animated animate__slideInLeft">
+            <p class="presentacion">Organiza tu vida. Cuida tu tiempo.</p>
+            <button class="botonprincipal">Comenzar</button> 
         </div>
         
-        <p class="fecha">
-            <span id="dia" class="dia"></span> 
-            <div class="contenedormes">
-                <span id="mes" class="mes"></span>
+        <div class="contenedorCuadrado animate__animated animate__slideInRight">
+            <div class="cuadrado">
+                
+                <div class="cuadradoHojaContenedor">
+                    <span id="dia" class="dia"></span> 
+                    <p class="fecha animate__animated animate__slideInRight">
+                        <div class="borde"></div>
+                    </p>
+                    
+                </div>
+                
+                <div class="cuadradoHoja"></div>
+                <div class="cuadradoHoja"></div>
+                <div class="cuadradoHoja"></div>
+                <div class="cuadradoHoja"></div>
+                <div class="cuadradoHoja"></div>
+                <div class="cuadradoHoja"></div>
+                <div class="cuadradoHoja"></div>
+                <div class="cuadradoHoja"></div>
+                
+                <div class="especial">
+                    
+                    <div class="cuadradoHoja1">
+                        <span id="mes" class="mes"></span>
+                    </div>
+                    
+                </div>
             </div>
-            <div class="borde"></div>
-        </p>
-        <script src="script.js"></script>
-        <img class="hojas" src="https://i.postimg.cc/fTMc3PPM/MARZO-500-x-500-px.png" alt="hojas-calendario">
+
+        </div>
         
+        
+        
+        
+        <script src="script.js"></script>
+        
+    </div>
+
+    <div class="ayuda">
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
     </div>
 
 
